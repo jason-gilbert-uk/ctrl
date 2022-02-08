@@ -27,7 +27,7 @@ async function resetConfig(dbTableName,region) {
                 {url:'https://www.tesco.com/groceries/en-GB/shop/frozen-food/all',state:"ready",nextInChain:""},
                 {url:'https://www.tesco.com/groceries/en-GB/shop/food-cupboard/all',state:"ready",nextInChain:""},
                 {url:'https://www.tesco.com/groceries/en-GB/shop/drinks/all',state:"ready",nextInChain:""},
-                {url:'https://www.tesco.com/groceries/en-GB/shop/baby/all',processed:false},
+                {url:'https://www.tesco.com/groceries/en-GB/shop/baby/all',state:"ready",nextInChain:""},
                 {url:'https://www.tesco.com/groceries/en-GB/shop/health-and-beauty/all',state:"ready",nextInChain:""},
                 {url:'https://www.tesco.com/groceries/en-GB/shop/pets/all',state:"ready",nextInChain:""},
                 {url:'https://www.tesco.com/groceries/en-GB/shop/household/all',state:"ready",nextInChain:""},
