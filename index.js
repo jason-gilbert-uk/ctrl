@@ -36,6 +36,9 @@ async function resetConfig(dbTableName,region) {
             ]
         }
         var result = await writeConfig(dbTableName,region,config);
+        console.log('returned from writeConfig')
+        console.log('result was')
+        console.log(result);
         return result;
 }
 
