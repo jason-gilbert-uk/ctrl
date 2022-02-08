@@ -35,7 +35,8 @@ async function resetConfig(dbTableName,region) {
                 {url:'https://www.tesco.com/groceries/en-GB/shop/easter/all',state:"ready",nextInChain:""},
             ]
         }
-        return writeConfig(dbTableName,region,config);
+        var result = await writeConfig(dbTableName,region,config);
+        return result;
 }
 
 exports.resetConfig = resetConfig
