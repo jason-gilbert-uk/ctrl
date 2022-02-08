@@ -2,12 +2,16 @@ const AWS = require('aws-sdk')
 
 
 async function writeConfig(dbTableName,region,config) {
+    console.log('writeConfig called')
     const docClient = new AWS.DynamoDB.DocumentClient({region});
 
     var item = {id: 'scrapingconfig', config: config}
     var params = {TableName: dbTableName, Item: item }
     try {
+        console.log('about to write')
         const result = await docClient.put(params).promise();
+        console.log('returned from write')
+        console.log(result);
         return result;      
     } catch (err) {
         console.log('error in writeConfig')
@@ -16,6 +20,7 @@ async function writeConfig(dbTableName,region,config) {
 }
 
 async function resetConfig(dbTableName,region) {
+    console.log('resetConfig called');
     var config = {
         urls : [{url:'https://www.tesco.com/groceries/en-GB/shop/fresh-food/all',state:"ready",nextInChain:""},
                 {url:'https://www.tesco.com/groceries/en-GB/shop/bakery/all',state:"ready",nextInChain:""},
